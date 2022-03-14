@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
+  killed: {fileID: 0}
 --- !u!61 &6638298358174130805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83,7 +84,6 @@ GameObject:
   - component: {fileID: 6638298359832256937}
   - component: {fileID: 6638298359832256938}
   - component: {fileID: 6638298359832256943}
-  - component: {fileID: 6638298359832256941}
   - component: {fileID: 6638298359832256942}
   m_Layer: 0
   m_Name: opossum-enemy
@@ -118,6 +118,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -203,27 +204,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28099394, y: 0.24242318}
   m_EdgeRadius: 0
---- !u!50 &6638298359832256941
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6638298359832256939}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.115348
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6638298359832256942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  enemy: {fileID: 0}
   isWalking: 0
   walkTime: 1.5
   waitTime: 0.8

@@ -21,7 +21,7 @@ public class grounded : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag != "Ground")
+        if (collision.collider.tag == "Ground")
         {
             jump = true;
             Player.GetComponent<playerController>().isGrounded = true;
