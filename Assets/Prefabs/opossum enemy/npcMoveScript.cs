@@ -8,7 +8,6 @@ public class npcMoveScript : MonoBehaviour
     public float moveSpeed;
     private SpriteRenderer mySpriteRenderer;
     private Rigidbody2D rb;
-    public GameObject test;
 
     public bool isWalking;
 
@@ -39,10 +38,8 @@ public class npcMoveScript : MonoBehaviour
             {
                 walkCounter -= Time.deltaTime;
             }
-
             switch (WalkDirection)
             {
-
                 case 0:
                     rb.velocity = new Vector2(moveSpeed, 0);
                     mySpriteRenderer.flipX = true;
@@ -52,20 +49,16 @@ public class npcMoveScript : MonoBehaviour
                     rb.velocity = new Vector2(-moveSpeed, 0);
                     mySpriteRenderer.flipX = false;
                     break;
-
             }
-
             if (walkCounter < 0)
             {
                 isWalking = false;
                 waitCounter = waitTime;
             }
-
         }
         else
         {
             waitCounter -= Time.deltaTime;
-
             rb.velocity = Vector2.zero;
 
             if (waitCounter < 0)
@@ -73,8 +66,6 @@ public class npcMoveScript : MonoBehaviour
                 ChooseDirection();
             }
         }
-
-
     }
 
     public void ChooseDirection()
@@ -87,10 +78,8 @@ public class npcMoveScript : MonoBehaviour
         {
             WalkDirection = 0;
         }
-
         isWalking = true;
         walkCounter = walkTime;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

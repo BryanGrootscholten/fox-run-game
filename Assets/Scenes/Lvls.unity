@@ -383,7 +383,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 53895115}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -551,7 +551,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 57639643}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1094,7 +1094,6 @@ GameObject:
   - component: {fileID: 348891286}
   - component: {fileID: 348891285}
   - component: {fileID: 348891288}
-  - component: {fileID: 348891289}
   m_Layer: 5
   m_Name: BtnLvl1
   m_TagString: Untagged
@@ -1198,7 +1197,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 348891288}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1233,18 +1232,6 @@ MonoBehaviour:
   levelText: {fileID: 1607440742}
   button: {fileID: 348891286}
   image: {fileID: 348891285}
---- !u!114 &348891289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348891283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01369a3c5eecbed449427e2d0066b357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &396180421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,8 +1526,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 557109760}
-        m_TargetAssemblyTypeName: lvlScript, Assembly-CSharp
-        m_MethodName: onClick
+        m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1672,8 +1659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d76e52f4270d81458371a71a7a2df69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLevel: 16
-  unlockedLevel: 2
+  totalLevel: 2
+  unlockedLevel: 1
   levelButtons:
   - {fileID: 348891288}
   - {fileID: 974888934}
@@ -1867,7 +1854,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 974888934}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2033,9 +2020,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1027580409}
+      - m_Target: {fileID: 57639643}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2343,8 +2330,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1189917787}
-        m_TargetAssemblyTypeName: lvlScript, Assembly-CSharp
-        m_MethodName: onClick
+        m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2691,9 +2678,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1449090979}
+      - m_Target: {fileID: 557109760}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2842,9 +2829,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1508627334}
+      - m_Target: {fileID: 557109760}
         m_TargetAssemblyTypeName: lvlButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

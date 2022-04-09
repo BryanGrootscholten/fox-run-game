@@ -29,11 +29,22 @@ public class playerController : MonoBehaviour
     {
         Run();
         Jump();
+        JumpReset();
+    }
+
+    void JumpReset()
+    {
+        if (Input.GetButtonDown("Crouch") && isGrounded == false)
+        {
+            float positionY = rb.position.y + 0.01f;
+            rb.transform.position = new Vector3(rb.position.x, positionY, 0f);
+        }
     }
 
     void Jump()
     {
-        actualSpeed = Input.GetAxis("Horizontal") * RunSpeed * Time.fixedDeltaTime;
+        // input.getaxis gives huge jumpboost if you are walking and then jump 
+        actualSpeed = /*Input.GetAxis("Horizontal") */ 0 * RunSpeed * Time.fixedDeltaTime;
         float jumpVel = 0;
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
@@ -66,36 +77,5 @@ public class playerController : MonoBehaviour
             anime.SetBool("pJump", true);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-
-        if (collision.collider.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-
-       
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-        if (collision.collider.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Coin")
-        {
-
-            Destroy(collision.gameObject);
-
-        }
-    }
-
     
 }

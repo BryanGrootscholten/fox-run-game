@@ -9,6 +9,10 @@ public class test : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (LvlController.currentUnlockedLvl < SceneManager.GetActiveScene().buildIndex + 1)
+        {
+            LvlController.currentUnlockedLvl = SceneManager.GetActiveScene().buildIndex + 1;
+        }
         if (collision.tag == "Player")
         {
             SceneManager.LoadScene(nextLvl);

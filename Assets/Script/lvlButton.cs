@@ -37,7 +37,7 @@ public class lvlButton : MonoBehaviour
         }
     }
 
-    public void onClick()
+    public void OnClick()
     {
         SceneManager.LoadScene(level);
     }
