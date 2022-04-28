@@ -48,6 +48,7 @@ public class playerController : MonoBehaviour
         float jumpVel = 0;
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
+            SoundManager.PlaySound("pJump");
             jumpVel = jumpSpeed;
             rb.velocity = new Vector2(actualSpeed, rb.velocity.y + jumpVel);
         } 
